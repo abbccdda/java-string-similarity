@@ -1,0 +1,8 @@
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
+
+test_script:
+  - mvn test
+  - mvn clean cobertura:cobertura coveralls:report
+
+build: off
